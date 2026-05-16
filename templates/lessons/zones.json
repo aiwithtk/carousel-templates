@@ -1,0 +1,84 @@
+{
+  "slide_intro.png": {
+    "zones": [
+      {
+        "name": "headline",
+        "x": 80, "y": 400, "w": 920, "h": 150,
+        "font": "PlayfairDisplay-Bold.ttf", "font_size": 58,
+        "color": "#1A2B4C", "align": "center"
+      },
+      {
+        "name": "subhead",
+        "x": 80, "y": 570, "w": 920, "h": 100,
+        "font": "Montserrat-Regular.ttf", "font_size": 32,
+        "color": "#555555", "align": "center"
+      }
+    ]
+  },
+  "slide_paragraph.png": {
+    "zones": [
+      {
+        "name": "headline",
+        "x": 80, "y": 120, "w": 920, "h": 120,
+        "font": "PlayfairDisplay-Bold.ttf", "font_size": 48,
+        "color": "#1A2B4C", "align": "left"
+      },
+      {
+        "name": "body",
+        "x": 100, "y": 280, "w": 880, "h": 600,
+        "font": "Montserrat-Regular.ttf", "font_size": 34,
+        "color": "#2C3E50", "align": "left", "line_height": 48
+      },
+      {
+        "name": "footer",
+        "x": 80, "y": 1050, "w": 920, "h": 80,
+        "font": "Montserrat-Italic.ttf", "font_size": 24,
+        "color": "#AAAAAA", "align": "center"
+      }
+    ]
+  },
+  "slide_bullets.png": {
+    "zones": [
+      {
+        "name": "headline",
+        "x": 80, "y": 100, "w": 920, "h": 100,
+        "font": "PlayfairDisplay-Bold.ttf", "font_size": 52,
+        "color": "#1A2B4C", "align": "left"
+      },
+      {
+        "name": "bullets",
+        "x": 120, "y": 240, "w": 840, "h": 650,
+        "font": "Montserrat-Regular.ttf", "font_size": 32,
+        "color": "#333333", "align": "left", "bullet_char": "•", "line_height": 50
+      },
+      {
+        "name": "footer",
+        "x": 80, "y": 1050, "w": 920, "h": 80,
+        "font": "Montserrat-Italic.ttf", "font_size": 24,
+        "color": "#AAAAAA", "align": "center"
+      }
+    ]
+  },
+  "slide_cta.png": {
+    "zones": [
+      {
+        "name": "cta_line1",
+        "x": 80, "y": 400, "w": 920, "h": 100,
+        "font": "PlayfairDisplay-Bold.ttf", "font_size": 42,
+        "color": "#1A2B4C", "align": "center"
+      },
+      {
+        "name": "cta_line2",
+        "x": 80, "y": 520, "w": 920, "h": 80,
+        "font": "Montserrat-Bold.ttf", "font_size": 36,
+        "color": "#0077B6", "align": "center"
+      },
+      {
+        "name": "footer",
+        "x": 80, "y": 1050, "w": 920, "h": 80,
+        "font": "Montserrat-Italic.ttf", "font_size": 24,
+        "color": "#AAAAAA", "align": "center"
+      }
+    ]
+  }
+}

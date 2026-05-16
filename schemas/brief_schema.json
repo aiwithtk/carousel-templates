@@ -4,30 +4,34 @@
   "properties": {
     "theme": {
       "type": "string",
-      "enum": ["corporate", "minimal"],
-      "description": "Thème visuel à utiliser"
+      "enum": ["lessons", "corporate", "minimal"],
+      "description": "Thème visuel"
     },
     "slides": {
       "type": "array",
       "minItems": 2,
-      "maxItems": 10,
+      "maxItems": 12,
       "items": {
         "type": "object",
         "properties": {
-          "template_file": { "type": "string", "pattern": "^slide_\\d+\\.png$" },
+          "template": {
+            "type": "string",
+            "enum": ["slide_intro.png", "slide_paragraph.png", "slide_bullets.png", "slide_cta.png", "slide_01.png", "slide_02.png"],
+            "description": "Nom du fichier template"
+          },
           "zones": {
             "type": "object",
             "additionalProperties": { "type": "string" },
-            "description": "Contenu textuel pour chaque zone (ex: headline, body, cta)"
+            "description": "Contenu pour chaque zone définie dans zones.json"
           }
         },
-        "required": ["template_file", "zones"]
+        "required": ["template", "zones"]
       }
     },
-    "platform": {
-      "type": "string",
-      "enum": ["instagram", "linkedin", "both"],
-      "default": "both"
+    "platforms": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["instagram", "linkedin"] },
+      "default": ["instagram", "linkedin"]
     }
   },
   "required": ["theme", "slides"]

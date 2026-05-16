@@ -2,25 +2,54 @@
 
 Engine for generating social media carousels with MultiCA integration.
 
-## 📁 Structure
+## 📁 Structure du dépôt
 ```text
 carousel-templates/
-├── fonts/                      # Polices de caractères (Montserrat, Playfair Display)
-├── templates/                  # Thèmes et zones de texte
-├── schemas/                    # Validation des briefs
-├── scripts/                    # Logique de rendu et export
-└── output/                     # Résultats générés
+├── README.md                          # Instructions pour l'agent
+├── schemas/
+│   └── brief_schema.json              # Format attendu du brief (ce que l'agent envoie)
+├── templates/
+│   └── lessons/                       # Thème correspondant à vos exemples
+│       ├── slide_intro.png            # Image de fond pour l’accroche
+│       ├── slide_paragraph.png        # Fond pour paragraphe (titre + texte)
+│       ├── slide_bullets.png          # Fond pour liste à puces
+│       ├── slide_cta.png              # Fond pour appel à l’action
+│       └── zones.json                 # Définition des zones de texte (coordonnées, polices, etc.)
+├── fonts/                             # Polices utilisées
+│   ├── PlayfairDisplay-Bold.ttf
+│   ├── PlayfairDisplay-Regular.ttf
+│   ├── Montserrat-Bold.ttf
+│   ├── Montserrat-Regular.ttf
+│   └── Montserrat-Italic.ttf
+├── scripts/
+│   ├── render.py                      # Superposition du texte sur l’image
+│   ├── export.py                      # Redimensionnement pour Instagram / LinkedIn
+│   └── utils/
+│       └── text_wrap.py               # Gestion des retours à la ligne / puces
+├── examples/                          # Briefs d’exemple (pour tester)
+│   ├── lessons_7.json                 # Exemple basé sur votre slide 12.png
+│   └── trend_2026.json
+├── output/                            # Dossier de sortie (ignoré par Git)
+│   ├── instagram/
+│   └── linkedin/
+├── requirements.txt                   # Pillow, etc.
+└── .gitignore
 ```
 
 ## 🔡 Fonts
 Le moteur supporte l'utilisation de polices personnalisées stockées dans le dossier `fonts/`.
 Actuellement incluses :
-- **Montserrat** : Moderne et lisible, idéal pour le corps de texte.
-- **Playfair Display** : Élégant, parfait pour les titres (headlines).
-
-Pour utiliser une police dans `zones.json`, spécifiez le chemin relatif depuis le dossier `fonts/` (ex: `Montserrat/Montserrat-Bold.ttf`).
+- **Montserrat** : Moderne et lisible.
+- **Playfair Display** : Élégant pour les titres.
 
 ## 🔧 Usage
 ```bash
-python scripts/render.py --brief brief.json --output output/slide_01.png
+# 1. Générer les slides brutes
+python scripts/render.py --brief examples/lessons_7.json --output_dir output/
+
+# 2. Exporter pour Instagram
+python scripts/export.py --input output/ --output final/instagram --platform instagram
+
+# 3. Exporter pour LinkedIn
+python scripts/export.py --input output/ --output final/linkedin --platform linkedin
 ```

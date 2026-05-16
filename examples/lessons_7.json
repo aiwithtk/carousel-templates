@@ -1,0 +1,37 @@
+{
+  "theme": "lessons",
+  "slides": [
+    {
+      "template": "slide_intro.png",
+      "zones": {
+        "headline": "7 leçons apprises à la dure",
+        "subhead": "Ça m'aurait évité 6 mois de galère"
+      }
+    },
+    {
+      "template": "slide_bullets.png",
+      "zones": {
+        "headline": "1. Personne n'achète \"de l'IA\"",
+        "bullets": "Vends le résultat, pas l'outil\nPlus de temps libre\nPlus de leads qualifiés\nMoins de tâches manuelles",
+        "footer": "L’IA est le nouveau pétrole du XXIe siècle."
+      }
+    },
+    {
+      "template": "slide_bullets.png",
+      "zones": {
+        "headline": "2. Ton 1er client ne sera pas parfait",
+        "bullets": "Ne perfectionne pas ton offre\nContacte dès maintenant\nApprends par la pratique",
+        "footer": "L’IA est le nouveau pétrole du XXIe siècle."
+      }
+    },
+    {
+      "template": "slide_bullets.png",
+      "zones": {
+        "headline": "3. Maîtriser 50 outils ne sert à rien",
+        "bullets": "Choisis 3 outils max\nMaîtrise-les à fond\nRésous un problème précis",
+        "footer": "L’IA est le nouveau pétrole du XXIe siècle."
+      }
+    }
+  ],
+  "platforms": ["instagram", "linkedin"]
+}

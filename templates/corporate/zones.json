@@ -1,0 +1,32 @@
+{
+  "slide_01.png": {
+    "zones": [
+      {
+        "name": "headline",
+        "x": 100, "y": 200, "w": 800, "h": 150,
+        "font": "Arial-Bold.ttf", "font_size": 48,
+        "color": "#FFFFFF",
+        "align": "center",
+        "max_chars": 60
+      },
+      {
+        "name": "subtitle",
+        "x": 100, "y": 400, "w": 800, "h": 100,
+        "font": "Arial.ttf", "font_size": 28,
+        "color": "#DDDDDD",
+        "align": "center"
+      }
+    ]
+  },
+  "slide_02.png": {
+    "zones": [
+      {
+        "name": "body",
+        "x": 150, "y": 250, "w": 750, "h": 800,
+        "font": "Arial.ttf", "font_size": 32,
+        "color": "#FFFFFF",
+        "align": "left"
+      }
+    ]
+  }
+}

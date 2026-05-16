@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "theme": {
+      "type": "string",
+      "enum": ["corporate", "minimal"],
+      "description": "Thème visuel à utiliser"
+    },
+    "slides": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "properties": {
+          "template_file": { "type": "string", "pattern": "^slide_\\d+\\.png$" },
+          "zones": {
+            "type": "object",
+            "additionalProperties": { "type": "string" },
+            "description": "Contenu textuel pour chaque zone (ex: headline, body, cta)"
+          }
+        },
+        "required": ["template_file", "zones"]
+      }
+    },
+    "platform": {
+      "type": "string",
+      "enum": ["instagram", "linkedin", "both"],
+      "default": "both"
+    }
+  },
+  "required": ["theme", "slides"]
+}
